@@ -1,0 +1,277 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
+
+.no-sessions {
+  text-align: center;
+  color: #777;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.session-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.session-card:hover {
+  transform: scale(1.03);
+}
+
+.session-header {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.session-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.session-content {
+  padding: 15px;
+}
+
+.session-footer {
+  padding: 15px;
+  border-top: 1px solid #e0e0e0;
+  text-align: right;
+}
+
+.generate-questions-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.generate-questions-button:hover {
+  background-color: #1976D2;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e0e0e0;
+}
+
+.modal-generate-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-generate-button:hover {
+  background-color: #45a049;
+}
+
+/* Add these to the existing App.css */
+
+.questions-view {
+  background-color: #f4f4f4;
+}
+
+.questions-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.accordion {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.accordion-toggle {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.accordion-content {
+  padding: 15px;
+}
+
+.qa-pair {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.question {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.answer {
+  color: #666;
+}
+
+.view-questions-button {
+  background-color: #2196F3;
+  margin-left: 10px;
+}
+
+.view-questions-button:hover {
+  background-color: #1976D2;
+}
+
+.answer-container {
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.answer-toggle {
+  margin-bottom: 10px;
+}
+
+.toggle-answer-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.answer {
+  margin-bottom: 10px;
+}
+
+.answer.hidden {
+  color: transparent;
+  background-color: #000;
+  user-select: none;
+  cursor: not-allowed;
+}
+
+.user-notes {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  resize: vertical;
+}
