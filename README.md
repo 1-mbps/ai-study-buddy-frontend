@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# AI Study Buddy Frontend
+
+By: Lucas Khan
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
