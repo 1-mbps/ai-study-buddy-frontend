@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
+const URL = "http://study-buddy-alb-2-2085209628.us-east-1.elb.amazonaws.com:8080"
+
 const App = () => {
   const [sessions, setSessions] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -26,7 +28,7 @@ const App = () => {
           content: base64.split(',')[1],
         };
 
-        const response = await fetch('http://localhost:8000/session', {
+        const response = await fetch(`${URL}/session`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -47,7 +49,7 @@ const App = () => {
 
   const handleGenerateQuestions = async () => {
     try {
-      const response = await fetch('http://localhost:8000/questions', {
+      const response = await fetch(`${URL}/questions`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
